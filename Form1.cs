@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using WMPLib;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace ListaReproduccion
 {
@@ -42,7 +43,7 @@ namespace ListaReproduccion
             {
                 Rutacompleta.Add(Ruta + "\\" + Values.Name);//agrega a una lista las direcciones indexadas
                 TagLib.File tagFile = TagLib.File.Create(Ruta + "\\" + Values.Name);//se uso la libreria tag para los datos como artista y duracion
-                Lst_Rep.Items.Add(Values.Name +"   "+ tagFile.Properties.Duration);//agrega los valores de nombre y duracion
+                Lst_Rep.Items.Add(Values.Name +" "+ tagFile.Properties.Duration);//agrega los valores de nombre y duracion
             }
             Lst_Rep.Focus();
             Lst_Rep.SelectedIndex = 0;//coloca el focus a index 0
@@ -142,6 +143,11 @@ namespace ListaReproduccion
             Buscador Search = new Buscador();
             Search.Show();
             this.Hide();
+        }
+
+        private void Btn_Ordenar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

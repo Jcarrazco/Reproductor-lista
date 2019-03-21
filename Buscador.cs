@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HtmlAgilityPack;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,16 +27,27 @@ namespace ListaReproduccion
 
         private void Btn_search_Click(object sender, EventArgs e)
         {
-            string Busque = Txbx_Buscar.Text;
-            /////////////////////////
+            string[] splito = Txbx_Buscar.Text.Split(' ');//separador de palabras
+            string URl = "https://www.youtube.com/results?search_query=";
+            foreach(string s in splito)
+            {
+                URl = URl + s + "+"; //agrego las palabras de busqueda
+            }
+            URl = URl.Substring(0, URl.Length - 1);//quito el exedente +
+            ////////////////////////
+            HtmlAgilityPack.HtmlWeb Webscrap = new HtmlAgilityPack.HtmlWeb();
+            HtmlAgilityPack.HtmlDocument doc = Webscrap.Load(URl);
+            HtmlNode[] nodes = doc.DocumentNode.SelectNodes("//*[@id='video - title']").ToArray();
+            foreach (HtmlNode Item in nodes)
+            {
+                listView1.Items.Add(Item.Name);
+            }
         }
 
         private void Buscador_Load(object sender, EventArgs e)
         {
 
-            HtmlAgilityPack.HtmlWeb Webscrap = new HtmlAgilityPack.HtmlWeb();
-            HtmlAgilityPack.HtmlDocument doc = Webscrap.Load("https://www.youtube.com/");
-            //var headernames = doc.DocumentNode.SelectNodes().ToList();
+            
         }
     }
 }

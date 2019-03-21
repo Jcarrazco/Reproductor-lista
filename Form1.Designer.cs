@@ -66,7 +66,7 @@
             // Btn_Upp
             // 
             this.Btn_Upp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Upp.Location = new System.Drawing.Point(475, 194);
+            this.Btn_Upp.Location = new System.Drawing.Point(493, 209);
             this.Btn_Upp.Name = "Btn_Upp";
             this.Btn_Upp.Size = new System.Drawing.Size(53, 43);
             this.Btn_Upp.TabIndex = 3;
@@ -77,7 +77,7 @@
             // Btn_up
             // 
             this.Btn_up.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_up.Location = new System.Drawing.Point(534, 194);
+            this.Btn_up.Location = new System.Drawing.Point(552, 209);
             this.Btn_up.Name = "Btn_up";
             this.Btn_up.Size = new System.Drawing.Size(53, 43);
             this.Btn_up.TabIndex = 4;
@@ -88,7 +88,7 @@
             // Btn_down
             // 
             this.Btn_down.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_down.Location = new System.Drawing.Point(593, 194);
+            this.Btn_down.Location = new System.Drawing.Point(611, 209);
             this.Btn_down.Name = "Btn_down";
             this.Btn_down.Size = new System.Drawing.Size(53, 43);
             this.Btn_down.TabIndex = 5;
@@ -99,7 +99,7 @@
             // Btn_DDown
             // 
             this.Btn_DDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_DDown.Location = new System.Drawing.Point(652, 194);
+            this.Btn_DDown.Location = new System.Drawing.Point(670, 209);
             this.Btn_DDown.Name = "Btn_DDown";
             this.Btn_DDown.Size = new System.Drawing.Size(53, 43);
             this.Btn_DDown.TabIndex = 6;
@@ -120,7 +120,7 @@
             // Btn_Stop
             // 
             this.Btn_Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Stop.Location = new System.Drawing.Point(487, 280);
+            this.Btn_Stop.Location = new System.Drawing.Point(523, 289);
             this.Btn_Stop.Name = "Btn_Stop";
             this.Btn_Stop.Size = new System.Drawing.Size(53, 43);
             this.Btn_Stop.TabIndex = 9;
@@ -132,7 +132,7 @@
             // 
             this.Btn_Pause.Enabled = false;
             this.Btn_Pause.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Pause.Location = new System.Drawing.Point(558, 280);
+            this.Btn_Pause.Location = new System.Drawing.Point(594, 289);
             this.Btn_Pause.Name = "Btn_Pause";
             this.Btn_Pause.Size = new System.Drawing.Size(53, 43);
             this.Btn_Pause.TabIndex = 10;
@@ -143,7 +143,7 @@
             // Btn_play
             // 
             this.Btn_play.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_play.Location = new System.Drawing.Point(627, 280);
+            this.Btn_play.Location = new System.Drawing.Point(663, 289);
             this.Btn_play.Name = "Btn_play";
             this.Btn_play.Size = new System.Drawing.Size(53, 43);
             this.Btn_play.TabIndex = 11;
@@ -163,11 +163,11 @@
             // 
             // Btn_search
             // 
-            this.Btn_search.Location = new System.Drawing.Point(407, 114);
+            this.Btn_search.Location = new System.Drawing.Point(407, 327);
             this.Btn_search.Name = "Btn_search";
-            this.Btn_search.Size = new System.Drawing.Size(75, 43);
+            this.Btn_search.Size = new System.Drawing.Size(63, 20);
             this.Btn_search.TabIndex = 13;
-            this.Btn_search.Text = "Buscar";
+            this.Btn_search.Text = "Buscador";
             this.Btn_search.UseVisualStyleBackColor = true;
             this.Btn_search.Click += new System.EventHandler(this.Btn_search_Click);
             // 
@@ -189,6 +189,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Lst_Rep);
             this.Name = "Reproductor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reproductor Hitss";
             this.Load += new System.EventHandler(this.Reproductor_Load);
             this.ResumeLayout(false);
